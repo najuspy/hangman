@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+//Library Imports of React
+import React, { Component } from 'react';
+
+import axios from 'axios';
+//Required Components Imports
+import Header from './Components/Header/Header.component'
+
+//WOrd List Import
+import words from './WordList'
+
+//CSS Imports
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      wordList: []
+    }
+
+  }
+  componentDidMount() {
+    this.setState({ wordList: words })
+  }
+
+  render() {
+    return (
+      < div >
+        <Header />
+        {this.state.wordList}
+      </div >
+    )
+  }
 }
 
 export default App;
