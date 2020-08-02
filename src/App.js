@@ -1,9 +1,10 @@
 //Library Imports of React
 import React, { Component } from 'react';
 
-import axios from 'axios';
 //Required Components Imports
 import Header from './Components/Header/Header.component'
+import KeyBoard from './Components/keyboard/keyboard.component'
+import Footer from './Components/Footer/footer.component'
 
 //WOrd List Import
 import words from './WordList'
@@ -24,10 +25,12 @@ class App extends Component {
   }
 
   render() {
+    const { wordList } = this.state
     return (
       < div >
         <Header />
-        {this.state.wordList}
+        <KeyBoard />
+        <Footer />
       </div >
     )
   }

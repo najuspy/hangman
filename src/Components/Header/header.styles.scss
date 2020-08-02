@@ -1,13 +1,12 @@
 .header {
+  position: relative;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 25px;
   background-color: #eceeeb;
+  height: 10vh;
 
-  .logo {
-    height: 90%;
-    width: 200px;
-    padding: 15px 0px;
+  img {
+    width: 100px;
+    padding: 0px;
+    height: 10vh;
   }
 }
